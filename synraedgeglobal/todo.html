@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List | SyntraEdge Global</title>
+    <link rel="stylesheet" href="todo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://use.typekit.net/wrt3xlf.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header id="header-container">
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="images/Logo-C.png" alt="SynraEdge Global Logo" height="80">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                What We Do
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Services</h6></li>
+                                <li><a class="dropdown-item" href="services/services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="services/cloud.html">Cloud</a></li>
+                                <li><a class="dropdown-item" href="services/consulting.html">Consulting</a></li>
+                                <li><a class="dropdown-item" href="services/ai-ml.html">AI & Machine Learning</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><h6 class="dropdown-header">Industries</h6></li>
+                                <li><a class="dropdown-item" href="industries/finance.html">Banking & Finance</a></li>
+                                <li><a class="dropdown-item" href="industries/healthcare.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="industries/manufacturing.html">Manufacturing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="company/testimonials.html">What We Think</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="company/about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers/careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container main-content">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="todo-app">
+                    <h1 class="text-center mb-4">Task Manager</h1>
+                    <form id="todo-form">
+                        <div class="input-group mb-3">
+                            <input 
+                                type="text" 
+                                id="todo-input" 
+                                class="form-control"
+                                placeholder="Enter your task..."
+                                required
+                            >
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> Add Task
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="todo-list-container">
+                        <div class="filters btn-group w-100 mb-3">
+                            <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                            <button class="btn btn-outline-primary" data-filter="active">Active</button>
+                            <button class="btn btn-outline-primary" data-filter="completed">Completed</button>
+                        </div>
+                        <ul id="todo-list" class="list-group mb-3"></ul>
+                        <div class="todo-stats d-flex justify-content-between align-items-center">
+                            <span id="tasks-count" class="text-muted">0 tasks left</span>
+                            <button id="clear-completed" class="btn btn-outline-danger">Clear Completed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
