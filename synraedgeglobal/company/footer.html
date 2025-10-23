@@ -1,56 +1,101 @@
+<!-- SyntraEdge Global - Unified Footer Component -->
+<!-- This component should be included on all pages -->
+
 <footer class="footer bg-dark text-white py-5">
     <div class="container">
         <div class="row g-4">
+            <!-- Company Info -->
             <div class="col-lg-3 col-md-6">
-                <div class="footer-brand mb-4">
-                    <img src="../images/Logo-W (1).png" alt="SyntraEdge Global" height="40" class="mb-3">
-                </div>
                 <h5>About SyntraEdge Global</h5>
                 <p class="text-white-50">As a global leader, we blend consulting and AI expertise across design, engineering and operations to accelerate business transformation.</p>
                 <div class="social-links mt-4">
-                    <a href="#" class="me-3 text-white-50"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="me-3 text-white-50"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="me-3 text-white-50"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="me-3 text-white-50"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-3 text-white" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="me-3 text-white" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="me-3 text-white" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="me-3 text-white" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
+            
+            <!-- Services Links -->
             <div class="col-lg-3 col-md-6">
                 <h5>Services</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="../services/services.html" class="text-white-50 text-decoration-none">All Services</a></li>
-                    <li class="mb-2"><a href="../services/ai-ml.html" class="text-white-50 text-decoration-none">AI & Machine Learning</a></li>
-                    <li class="mb-2"><a href="../services/cloud.html" class="text-white-50 text-decoration-none">Cloud Solutions</a></li>
-                    <li class="mb-2"><a href="../services/consulting.html" class="text-white-50 text-decoration-none">Digital Consulting</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/ai-ml.html')" class="text-white-50 text-decoration-none">AI & Machine Learning</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/cloud.html')" class="text-white-50 text-decoration-none">Cloud Services</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/data-analytics.html')" class="text-white-50 text-decoration-none">Data Analytics</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/digital-transformation.html')" class="text-white-50 text-decoration-none">Digital Transformation</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/digital-marketing.html')" class="text-white-50 text-decoration-none">Digital Marketing</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/bpo-services.html')" class="text-white-50 text-decoration-none">BPO Services</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/automations.html')" class="text-white-50 text-decoration-none">Automations</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('services/services.html')" class="text-white-50 text-decoration-none">All Services</a></li>
                 </ul>
             </div>
+            
+            <!-- Industries Links -->
             <div class="col-lg-3 col-md-6">
                 <h5>Industries</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="../industries/finance.html" class="text-white-50 text-decoration-none">Banking & Finance</a></li>
-                    <li class="mb-2"><a href="../industries/healthcare.html" class="text-white-50 text-decoration-none">Healthcare</a></li>
-                    <li class="mb-2"><a href="../industries/manufacturing.html" class="text-white-50 text-decoration-none">Manufacturing</a></li>
-                    <li class="mb-2"><a href="../industries/retail.html" class="text-white-50 text-decoration-none">Retail & Consumer</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('industries/finance.html')" class="text-white-50 text-decoration-none">Financial Services</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('industries/healthcare.html')" class="text-white-50 text-decoration-none">Healthcare</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('industries/retail.html')" class="text-white-50 text-decoration-none">Retail & E-commerce</a></li>
+                    <li class="mb-2"><a href="javascript:void(0)" onclick="navigateToPage('industries/manufacturing.html')" class="text-white-50 text-decoration-none">Manufacturing</a></li>
                 </ul>
             </div>
+            
+            <!-- Contact Info -->
             <div class="col-lg-3 col-md-6">
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled text-white-50">
-                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@synraedge.com</li>
-                    <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</li>
-                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Innovation Drive<br>San Francisco, CA 94105</li>
+                    <li class="mb-2">
+                        <i class="fas fa-envelope me-2 text-accent"></i> 
+                        <a href="mailto:contact@syntraedgeglobal.com" class="text-white-50 text-decoration-none">contact@syntraedgeglobal.com</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-phone me-2 text-accent"></i> 
+                        <a href="tel:+918721721666" class="text-white-50 text-decoration-none">+91 8721721666</a>
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-map-marker-alt me-2 text-accent"></i> 
+                        Nexus Business Center<br>Madhapur, Hyderabad, India, 500081
+                    </li>
                 </ul>
             </div>
         </div>
-        <hr class="mt-4 mb-4 bg-secondary">
+        
+        <!-- Footer Bottom -->
+        <hr class="mt-4 mb-4" style="background-color: var(--secondary); opacity: 0.3;">
         <div class="row align-items-center">
             <div class="col-md-6">
-                <p class="text-white-50 mb-0">&copy; 2025 SynraEdge Global. All rights reserved.</p>
+                <p class="text-white-50 mb-0">&copy; 2025 SyntraEdge Global. All rights reserved.</p>
             </div>
             <div class="col-md-6 text-md-end">
-                <a href="/privacy.html" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
-                <a href="/terms.html" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
-                <a href="/sitemap.html" class="text-white-50 text-decoration-none">Sitemap</a>
+                <a href="javascript:void(0)" onclick="navigateToPage('legal/privacy.html')" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                <a href="javascript:void(0)" onclick="navigateToPage('legal/terms.html')" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+                <a href="javascript:void(0)" onclick="navigateToPage('sitemap.html')" class="text-white-50 text-decoration-none">Sitemap</a>
             </div>
         </div>
     </div>
 </footer>
+
+<script>
+    // Footer navigation functions (uses same navigation system as header)
+    // These functions will work if the navigation system is already loaded from nav.html
+    // or they can be defined independently
+    
+    if (typeof navigateToPage === 'undefined') {
+        // Fallback navigation if nav.html functions aren't loaded
+        function navigateToPage(page) {
+            // Determine the base path based on current location
+            const currentPath = window.location.pathname;
+            let basePath = '';
+            
+            // Simple path detection - can be enhanced
+            if (currentPath.includes('/company/') || currentPath.includes('/careers/') || 
+                currentPath.includes('/services/') || currentPath.includes('/industries/')) {
+                basePath = '../';
+            }
+            
+            window.location.href = basePath + page;
+        }
+    }
+</script>

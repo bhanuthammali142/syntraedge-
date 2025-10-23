@@ -1,46 +1,160 @@
-<nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="../index.html">
-            <img src="../images/Logo-C.png" height="80" class="main-logo">
-            <!-- Fallback if image isn't loaded yet -->
-            <span class="d-none">SyntraEdge Global</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        What We Do
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><h6 class="dropdown-header">Services</h6></li>
-                        <li><a class="dropdown-item" href="../services/services.html">All Services</a></li>
-                        <li><a class="dropdown-item" href="../services/ai-ml.html">AI & Machine Learning</a></li>
-                        <li><a class="dropdown-item" href="../services/cloud.html">Cloud Solutions</a></li>
-                        <li><a class="dropdown-item" href="../services/consulting.html">Consulting</a></li>
-                        <li><div class="dropdown-divider"></div></li>
-                        <li><h6 class="dropdown-header">Industries</h6></li>
-                        <li><a class="dropdown-item" href="../industries/finance.html">Banking & Finance</a></li>
-                        <li><a class="dropdown-item" href="../industries/healthcare.html">Healthcare</a></li>
-                        <li><a class="dropdown-item" href="../industries/manufacturing.html">Manufacturing</a></li>
-                        <li><a class="dropdown-item" href="../industries/retail.html">Retail & Consumer</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="testimonials.html">What We Think</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../careers/careers.html">Careers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../careers/contact.html">Contact Us</a>
-                </li>
-            </ul>
+<!-- SyntraEdge Global - Unified Header Component -->
+<!-- This component should be included on all pages with proper path adjustments -->
+
+<header id="header-container">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
+        <div class="container">
+            <!-- Logo - Path will be adjusted per page -->
+            <a class="navbar-brand" href="javascript:void(0)" onclick="navigateToHome()">
+                <img src="" alt="SyntraEdge Global Logo" height="80" id="navLogo" 
+                     onerror="this.onerror=null;this.src='https://placehold.co/150x80/341d55/ffffff?text=SYNTRAEDGE+LOGO';">
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                        <!-- Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                               aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/services.html')">All Services</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/ai-ml.html')">AI & Machine Learning</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/cloud.html')">Cloud Services</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/data-analytics.html')">Data Analytics</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/digital-transformation.html')">Digital Transformation</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/digital-marketing.html')">Digital Marketing</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/bpo-services.html')">BPO Services</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('services/automations.html')">Automations</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Industries Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                               aria-expanded="false">
+                                Industries
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('industries/finance.html')">Financial Services</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('industries/healthcare.html')">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('industries/retail.html')">Retail & E-commerce</a></li>
+                                <li><a class="dropdown-item" href="javascript:void(0)" onclick="navigateToPage('industries/manufacturing.html')">Manufacturing</a></li>
+                            </ul>
+                        </li>                    <!-- What We Think -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="navigateToPage('company/testimonials.html')">What We Think</a>
+                    </li>
+                    
+                    <!-- About Us -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="navigateToPage('company/about.html')">About Us</a>
+                    </li>
+                    
+                    <!-- Careers -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="navigateToPage('careers/careers.html')">Careers</a>
+                    </li>
+                    
+                    <!-- Contact Us -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="navigateToPage('careers/contact.html')">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
+
+<script>
+    // Navigation Configuration - This will be set on each page
+    let navConfig = {
+        basePath: '../',  // Default - will be overridden per page
+        currentPage: '',   // Will be set per page for active state
+        logoPath: '../images/Logo-C.png'  // Default logo path
+    };
+    
+    // Initialize navigation paths
+    function initializeNavigation(config) {
+        if (config) {
+            navConfig = { ...navConfig, ...config };
+        }
+        
+        // Set logo path
+        const logoElement = document.getElementById('navLogo');
+        if (logoElement && navConfig.logoPath) {
+            logoElement.src = navConfig.logoPath;
+        }
+        
+        // Set active page
+        if (navConfig.currentPage) {
+            setActivePage(navConfig.currentPage);
+        }
+    }
+    
+    // Set active page styling
+    function setActivePage(pageName) {
+        // Remove any existing active classes
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.classList.remove('active');
+            link.removeAttribute('aria-current');
+        });
+        
+        // Add active class to current page
+        const pageMapping = {
+            'home': 0,
+            'services': 1,
+            'testimonials': 2, 
+            'about': 3,
+            'careers': 4,
+            'contact': 5
+        };
+        
+        if (pageMapping[pageName] !== undefined) {
+            const navLinks = document.querySelectorAll('.navbar-nav > .nav-item > .nav-link');
+            if (navLinks[pageMapping[pageName]]) {
+                navLinks[pageMapping[pageName]].classList.add('active');
+                navLinks[pageMapping[pageName]].setAttribute('aria-current', 'page');
+            }
+        }
+    }
+    
+    // Navigate to home page
+    function navigateToHome() {
+        window.location.href = navConfig.basePath + 'index.html';
+    }
+    
+    // Navigate to specific page
+    function navigateToPage(page) {
+        window.location.href = navConfig.basePath + page;
+    }
+    
+    // Navbar scroll effect
+    function initNavbarScrollEffect() {
+        const mainNavbar = document.getElementById('mainNavbar');
+        if (!mainNavbar) return;
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNavbar.classList.add('scrolled');
+            } else {
+                mainNavbar.classList.remove('scrolled');
+            }
+        });
+    }
+    
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        initNavbarScrollEffect();
+        // Navigation will be initialized per page with specific config
+    });
+</script>

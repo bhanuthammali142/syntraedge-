@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SyntraEdge Global | Cloud Solutions - AI-Powered Technology Services</title>
+    <title>SyntraEdge Global | Digital Transformation - Modernize Your Business</title>
     
     <!-- Favicon and Apple Touch Icons -->
     <link rel="icon" type="image/png" href="../images/ICON-C (1).png" onerror="this.href='https://placehold.co/32x32/341d55/ffffff?text=SE'">
@@ -12,11 +12,11 @@
     <meta name="theme-color" content="#341d55">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover SyntraEdge Global's comprehensive cloud solutions including migration, security, and optimization services.">
-    <meta name="keywords" content="SyntraEdge Global, cloud solutions, cloud migration, cloud security, AWS, Azure, Google Cloud">
-    <meta property="og:title" content="SyntraEdge Global | Cloud Solutions">
-    <meta property="og:description" content="Transform your business with our comprehensive cloud infrastructure solutions.">
-    <meta property="og:image" content="https://placehold.co/1200x630/341d55/ffffff?text=SYNRAEDGE+CLOUD">
+    <meta name="description" content="SyntraEdge Global's Digital Transformation Services - Legacy system modernization, cloud migration, digital strategy, process digitization, and technology adoption.">
+    <meta name="keywords" content="SyntraEdge Global, digital transformation, legacy modernization, cloud migration, digital strategy, technology adoption, process digitization">
+    <meta property="og:title" content="SyntraEdge Global | Digital Transformation">
+    <meta property="og:description" content="Modernize your business with comprehensive digital transformation solutions.">
+    <meta property="og:image" content="https://placehold.co/1200x630/341d55/ffffff?text=SYNTRAEDGE+DIGITAL+TRANSFORMATION">
     
     <!-- Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,10 +26,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
     
-    <!-- Global Unified CSS -->
-    <link href="../css/global.css" rel="stylesheet">
-    
-    <!-- Page Specific CSS -->
+    <!-- Custom CSS - Exact same as index.html -->
     <style>
         :root {
             --primary: #341d55;
@@ -201,8 +198,8 @@
             border-radius: 12px;
         }
 
-        /* Cloud Solutions Animation */
-        .cloud-animation {
+        /* Digital Consulting Animation */
+        .consulting-animation {
             position: relative;
             width: 100%;
             height: 100%;
@@ -211,57 +208,57 @@
             justify-content: center;
         }
 
-        .cloud-base {
+        .gear {
             position: absolute;
-            width: 50px;
-            height: 20px;
-            background: var(--primary);
-            opacity: 0.1;
-            border-radius: 20px;
-            animation: float 3s infinite;
+            border: 3px dotted var(--primary);
+            border-radius: 50%;
+            opacity: 0.2;
         }
 
-        .cloud-front {
-            position: absolute;
+        .g1 {
+            width: 40px;
+            height: 40px;
+            animation: spin 4s linear infinite;
+        }
+
+        .g2 {
             width: 30px;
             height: 30px;
-            background: var(--primary);
-            opacity: 0.1;
-            border-radius: 50%;
-            top: 40%;
-            animation: float 3s infinite 0.5s;
+            animation: spin 4s linear infinite reverse;
         }
 
-        .data-dot {
+        .chart-line {
             position: absolute;
-            width: 6px;
-            height: 6px;
+            height: 2px;
             background: var(--primary);
-            border-radius: 50%;
-            animation: datamove 2s infinite;
+            opacity: 0.2;
+            transform-origin: left;
         }
 
-        .d1 { animation-delay: 0s; }
-        .d2 { animation-delay: 0.6s; }
-        .d3 { animation-delay: 1.2s; }
+        .l1 { width: 20px; bottom: 30%; left: 25%; animation: grow 2s infinite; }
+        .l2 { width: 15px; bottom: 40%; left: 30%; animation: grow 2s infinite 0.6s; }
+        .l3 { width: 25px; bottom: 50%; left: 20%; animation: grow 2s infinite 1.2s; }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        @keyframes datamove {
-            0% { transform: translate(0, 0); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translate(20px, -20px); opacity: 0; }
+        @keyframes grow {
+            0%, 100% { transform: scaleX(0.5); opacity: 0.2; }
+            50% { transform: scaleX(1); opacity: 0.8; }
         }
 
         .service-card:hover .service-icon {
             transform: translateY(-5px);
         }
 
-        .service-card:hover .data-dot {
+        .service-card:hover .chart-line {
             animation-duration: 1s;
+        }
+
+        .service-card:hover .gear {
+            animation-duration: 2s;
         }
 
         .service-card .btn-outline-primary {
@@ -443,13 +440,13 @@
             <div class="row">
                     <div class="col-lg-8 mx-auto text-center hero-content text-white mb-5">
                         <h1 class="display-3 fw-bold mb-4 scroll-animate" data-animation="fade-in">
-                            Cloud Solutions
-                            <span class="text-accent">for Modern Business</span>
+                            Digital Transformation
+                            <span class="text-accent">& Modernization</span>
                         </h1>
-                        <p class="lead mb-4 scroll-animate" data-animation="slide-up">Scale your business with secure, flexible, and efficient cloud infrastructure solutions that drive innovation and growth.</p>
+                        <p class="lead mb-4 scroll-animate" data-animation="slide-up">Transform your legacy systems and processes into modern, efficient, and scalable digital solutions for the future.</p>
                         <div class="d-flex justify-content-center gap-3 scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
                             <a href="#services" class="btn btn-primary btn-lg">
-                                <i class="fas fa-cloud me-2"></i>Explore Solutions
+                                <i class="fas fa-rocket me-2"></i>Start Transformation
                             </a>
                             <a href="../careers/contact.html" class="btn btn-outline-light btn-lg">
                                 <i class="fas fa-envelope me-2"></i>Contact Us
@@ -461,50 +458,50 @@
         </div>
     </section>
 
-    <!-- Cloud Services Section -->
+    <!-- Consulting Services Section -->
     <section id="services" class="py-5 bg-light position-relative">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center">
-                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Cloud Expertise</span>
-                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Comprehensive Cloud Solutions</h2>
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Strategic Expertise</span>
+                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Digital Transformation Services</h2>
                     <p class="lead text-muted mb-0 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
-                        Transform your infrastructure with our end-to-end cloud services
+                        Strategic guidance to accelerate your digital transformation journey
                     </p>
                 </div>
             </div>
 
             <div class="row g-4">
-                <!-- Cloud Migration -->
+                <!-- Digital Strategy -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
                         <div class="card-body p-4">
                             <div class="service-icon-wrapper mb-4">
-                                <div class="service-icon cloud-icon p-3 d-inline-flex">
-                                    <div class="cloud-animation">
-                                        <span class="cloud-base"></span>
-                                        <span class="cloud-front"></span>
-                                        <span class="data-dot d1"></span>
-                                        <span class="data-dot d2"></span>
-                                        <span class="data-dot d3"></span>
-                                        <i class="fas fa-cloud fa-2x text-primary position-relative"></i>
+                                <div class="service-icon consulting-icon p-3 d-inline-flex">
+                                    <div class="consulting-animation">
+                                        <span class="gear g1"></span>
+                                        <span class="gear g2"></span>
+                                        <span class="chart-line l1"></span>
+                                        <span class="chart-line l2"></span>
+                                        <span class="chart-line l3"></span>
+                                        <i class="fas fa-lightbulb fa-2x text-primary position-relative"></i>
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h4 mb-3">Cloud Migration</h3>
-                            <p class="text-muted mb-4">Seamless transition of your applications and data to the cloud with zero downtime and minimal risk.</p>
+                            <h3 class="h4 mb-3">Digital Strategy</h3>
+                            <p class="text-muted mb-4">Comprehensive digital transformation strategies tailored to your business objectives and market position.</p>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Application Migration</span>
+                                    <span>Digital Roadmap Development</span>
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Data Migration</span>
+                                    <span>Technology Assessment</span>
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Zero Downtime Strategy</span>
+                                    <span>Competitive Analysis</span>
                                 </li>
                             </ul>
                             <a href="../careers/contact.html" class="btn btn-outline-primary">Learn More</a>
@@ -512,59 +509,59 @@
                     </div>
                 </div>
 
-                <!-- Cloud Security -->
+                <!-- Process Optimization -->
                 <div class="col-lg-4 col-md-6">
                     <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
-                        <div class="card-body p-4">
-                            <div class="service-icon-wrapper mb-4">
-                                <div class="service-icon p-3 d-inline-flex">
-                                    <i class="fas fa-shield-alt fa-2x text-primary"></i>
-                                </div>
-                            </div>
-                            <h3 class="h4 mb-3">Cloud Security</h3>
-                            <p class="text-muted mb-4">Enterprise-grade security solutions to protect your cloud infrastructure and ensure compliance.</p>
-                            <ul class="list-unstyled mb-4">
-                                <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Security Assessment</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Compliance Management</span>
-                                </li>
-                                <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Threat Detection</span>
-                                </li>
-                            </ul>
-                            <a href="../careers/contact.html" class="btn btn-outline-primary">Learn More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cloud Operations -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
                         <div class="card-body p-4">
                             <div class="service-icon-wrapper mb-4">
                                 <div class="service-icon p-3 d-inline-flex">
                                     <i class="fas fa-cogs fa-2x text-primary"></i>
                                 </div>
                             </div>
-                            <h3 class="h4 mb-3">Cloud Operations</h3>
-                            <p class="text-muted mb-4">24/7 monitoring and optimization of cloud resources for maximum efficiency and performance.</p>
+                            <h3 class="h4 mb-3">Process Optimization</h3>
+                            <p class="text-muted mb-4">Streamline your operations with data-driven process improvements and automation solutions.</p>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>24/7 Monitoring</span>
+                                    <span>Workflow Analysis</span>
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Performance Optimization</span>
+                                    <span>Automation Implementation</span>
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
                                     <i class="fas fa-check text-primary me-2"></i>
-                                    <span>Cost Management</span>
+                                    <span>Performance Monitoring</span>
+                                </li>
+                            </ul>
+                            <a href="../careers/contact.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Change Management -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="card-body p-4">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon p-3 d-inline-flex">
+                                    <i class="fas fa-users fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Change Management</h3>
+                            <p class="text-muted mb-4">Guide your organization through digital transformation with effective change management strategies.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Stakeholder Engagement</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Training & Development</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Culture Transformation</span>
                                 </li>
                             </ul>
                             <a href="../careers/contact.html" class="btn btn-outline-primary">Learn More</a>
@@ -575,34 +572,34 @@
         </div>
     </section>
 
-    <!-- Cloud Partners -->
+    <!-- Consulting Approach -->
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center text-center mb-5">
                 <div class="col-lg-8">
-                    <h2 class="display-5 fw-bold mb-4 scroll-animate" data-animation="fade-in">Our Cloud Partners</h2>
-                    <p class="lead text-muted scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">We work with leading cloud providers to deliver the best solutions</p>
+                    <h2 class="display-5 fw-bold mb-4 scroll-animate" data-animation="fade-in">Our Consulting Approach</h2>
+                    <p class="lead text-muted scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">A proven methodology for successful digital transformation</p>
                 </div>
             </div>
             <div class="row align-items-center justify-content-center g-4">
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">
-                        <img src="https://placehold.co/150x80/341d55/ffffff?text=AWS" alt="AWS" class="img-fluid client-logo">
-                </div>
+                        <img src="https://placehold.co/150x80/341d55/ffffff?text=ANALYZE" alt="Analyze" class="img-fluid client-logo">
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
-                        <img src="https://placehold.co/150x80/341d55/ffffff?text=AZURE" alt="Microsoft Azure" class="img-fluid client-logo">
-                </div>
+                        <img src="https://placehold.co/150x80/341d55/ffffff?text=STRATEGIZE" alt="Strategize" class="img-fluid client-logo">
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.3s;">
-                        <img src="https://placehold.co/150x80/341d55/ffffff?text=GCP" alt="Google Cloud" class="img-fluid client-logo">
-        </div>
+                        <img src="https://placehold.co/150x80/341d55/ffffff?text=IMPLEMENT" alt="Implement" class="img-fluid client-logo">
+                    </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
                     <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.4s;">
-                        <img src="https://placehold.co/150x80/341d55/ffffff?text=IBM" alt="IBM Cloud" class="img-fluid client-logo">
+                        <img src="https://placehold.co/150x80/341d55/ffffff?text=OPTIMIZE" alt="Optimize" class="img-fluid client-logo">
                     </div>
                 </div>
             </div>
@@ -616,50 +613,50 @@
                 <div class="col-lg-12">
                     <div class="achievement-cards">
                         <div class="row g-4 justify-content-center">
-                <div class="col-md-3 col-6">
+                            <div class="col-md-3 col-6">
                                 <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
                                     <div class="achievement-icon mb-3">
-                                        <i class="fas fa-percentage fa-2x text-primary"></i>
+                                        <i class="fas fa-handshake fa-2x text-primary"></i>
                                     </div>
                                     <h3 class="counter display-5 fw-bold text-primary mb-2">
-                                        <span class="counter-number" data-target="99">0</span>%
+                                        <span class="counter-number" data-target="300">0</span>+
                                     </h3>
-                                    <p class="mb-0 text-muted">Uptime Guarantee</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6">
+                                    <p class="mb-0 text-muted">Consulting Projects</p>
+                                </div>
+            </div>
+                            <div class="col-md-3 col-6">
                                 <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.3s;">
                                     <div class="achievement-icon mb-3">
-                                        <i class="fas fa-project-diagram fa-2x text-primary"></i>
-                                    </div>
+                                        <i class="fas fa-chart-line fa-2x text-primary"></i>
+                        </div>
                                     <h3 class="counter display-5 fw-bold text-primary mb-2">
-                                        <span class="counter-number" data-target="500">0</span>+
+                                        <span class="counter-number" data-target="75">0</span>%
                                     </h3>
-                                    <p class="mb-0 text-muted">Cloud Projects</p>
+                                    <p class="mb-0 text-muted">Efficiency Improvement</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-6">
+                            <div class="col-md-3 col-6">
                                 <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.4s;">
                                     <div class="achievement-icon mb-3">
-                                        <i class="fas fa-chart-line fa-2x text-primary"></i>
-                                    </div>
-                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
-                                        <span class="counter-number" data-target="40">0</span>%
-                                    </h3>
-                                    <p class="mb-0 text-muted">Cost Reduction</p>
-                    </div>
+                                        <i class="fas fa-users fa-2x text-primary"></i>
                 </div>
-                <div class="col-md-3 col-6">
+                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
+                                        <span class="counter-number" data-target="50">0</span>+
+                                    </h3>
+                                    <p class="mb-0 text-muted">Expert Consultants</p>
+                        </div>
+                    </div>
+                            <div class="col-md-3 col-6">
                                 <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
                                     <div class="achievement-icon mb-3">
-                                        <i class="fas fa-clock fa-2x text-primary"></i>
+                                        <i class="fas fa-star fa-2x text-primary"></i>
                                     </div>
                                     <h3 class="counter display-5 fw-bold text-primary mb-2">
-                                        <span class="counter-number" data-target="24">0</span>/7
+                                        <span class="counter-number" data-target="95">0</span>%
                                     </h3>
-                                    <p class="mb-0 text-muted">Support</p>
-                                </div>
-                            </div>
+                                    <p class="mb-0 text-muted">Client Satisfaction</p>
+                </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -672,8 +669,8 @@
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8">
-                    <h2 class="display-5 fw-bold mb-4 scroll-animate" data-animation="fade-in">Ready to Move to the Cloud?</h2>
-                    <p class="lead mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Let's discuss how our cloud solutions can transform your business</p>
+                    <h2 class="display-5 fw-bold mb-4 scroll-animate" data-animation="fade-in">Ready to Transform Your Business?</h2>
+                    <p class="lead mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Let's discuss how our consulting expertise can accelerate your digital transformation</p>
                     <a href="../careers/contact.html" class="btn btn-light btn-lg me-3 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
                         <i class="fas fa-envelope me-2"></i>Contact Us
                     </a>
@@ -716,7 +713,7 @@
                         <li class="mb-2"><a href="../industries/manufacturing.html" class="text-white-50 text-decoration-none">Manufacturing</a></li>
                         <li class="mb-2"><a href="../industries/retail.html" class="text-white-50 text-decoration-none">Retail & Consumer</a></li>
                     </ul>
-                </div>
+                    </div>
                 <div class="col-lg-3 col-md-6">
                     <h5>Contact Us</h5>
                     <ul class="list-unstyled text-white-50">
@@ -725,7 +722,7 @@
                         <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Nexus Business Center<br>Madhapur, Hyderabad, India, 500081.</li>
                     </ul>
                 </div>
-            </div>
+                    </div>
             <hr class="mt-4 mb-4 bg-secondary">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -794,8 +791,8 @@
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
                         const target = entry.target;
                         const animationType = target.getAttribute('data-animation');
                         const delay = target.style.transitionDelay || '0s';

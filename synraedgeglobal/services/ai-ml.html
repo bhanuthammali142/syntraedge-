@@ -26,7 +26,10 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
     
-    <!-- Custom CSS - Exact same as index.html -->
+    <!-- Global Unified CSS -->
+    <link href="../css/global.css" rel="stylesheet">
+    
+    <!-- Page Specific CSS -->
     <style>
         :root {
             --primary: #341d55;
@@ -374,52 +377,10 @@
     </style>
 </head>
 <body class="bg-white">
-    <!-- Navigation -->
-    <header id="header-container">
-        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../images/Logo-C.png" alt="SynraEdge Global Logo" height="80" onerror="this.onerror=null;this.src='https://placehold.co/150x80/341d55/ffffff?text=SYNRAEDGE+LOGO';">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                What We Do
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><h6 class="dropdown-header">Services</h6></li>
-                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                                <li><a class="dropdown-item" href="cloud.html">Cloud</a></li>
-                                <li><a class="dropdown-item" href="consulting.html">Consulting</a></li>
-                                <li><a class="dropdown-item" href="ai-ml.html">AI & Machine Learning</a></li>
-                                <li><div class="dropdown-divider"></div></li>
-                                <li><h6 class="dropdown-header">Industries</h6></li>
-                                <li><a class="dropdown-item" href="../industries/finance.html">Banking & Finance</a></li>
-                                <li><a class="dropdown-item" href="../industries/healthcare.html">Healthcare</a></li>
-                                <li><a class="dropdown-item" href="../industries/manufacturing.html">Manufacturing</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../company/testimonials.html">What We Think</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../company/about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../careers/careers.html">Careers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../careers/contact.html">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- Navigation - Load Unified Header -->
+    <div id="nav-placeholder">
+        <!-- Navigation will be loaded here -->
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-banner position-relative vh-100 d-flex align-items-end pb-5">
@@ -676,8 +637,12 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-dark text-white py-5">
+    <!-- Footer - Load Unified Footer -->
+    <div id="footer-placeholder">
+        <!-- Footer will be loaded here -->
+    </div>
+
+    <!-- JavaScript -->
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
