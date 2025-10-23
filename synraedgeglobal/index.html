@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyntraEdge Global | AI-Powered Technology Services & Consulting Company</title>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/png" href="images/ICON-C (1).png" onerror="this.href='https://placehold.co/32x32/341d55/ffffff?text=SE'">
+    <link rel="apple-touch-icon" href="images/ICON-C (1).png" onerror="this.href='https://placehold.co/180x180/341d55/ffffff?text=SE'">
+    <link rel="manifest" href="images/site.webmanifest">
+    <meta name="theme-color" content="#341d55">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SyntraEdge Global - Leading provider of AI-powered technology services, cloud solutions, and digital transformation consulting.">
+    <meta name="keywords" content="SyntraEdge Global, AI solutions, digital transformation, cloud services, technology consulting">
+    <meta property="og:title" content="SyntraEdge Global | Technology Services & Consulting">
+    <meta property="og:description" content="Transform your business with AI-powered solutions and expert consulting services.">
+    <meta property="og:image" content="https://placehold.co/1200x630/341d55/ffffff?text=SYNRAEDGE+GLOBAL">
+    
+    <!-- Core CSS: Added Inter font as a fallback/standard -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://use.typekit.net/wrt3xlf.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #341d55;
+            --secondary: #7470a6;
+            --accent: #fbcd2e;
+            --dark: #111111;
+            --light: #ffffff;
+        }
+
+        body {
+            font-family: proxima-nova, 'Inter', sans-serif; /* Added Inter fallback */
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .video-container {
+            height: 100%;
+            position: relative;
+        }
+
+        .video-container video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Adjusted overlay for better contrast */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(52, 29, 85, 0.9),
+                rgba(116, 112, 166, 0.8)
+            );
+        }
+        
+        .banner-content {
+            width: 90%;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 4px 10px rgba(52, 29, 85, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            box-shadow: 0 6px 15px rgba(116, 112, 166, 0.6);
+        }
+
+        .btn-outline-light {
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+        }
+
+        /* Feature Cards */
+        .feature-cards .card {
+            transition: transform 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .feature-cards .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-cards .card-title {
+            color: var(--primary);
+        }
+
+        /* Custom Utilities */
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        .text-accent {
+            color: var(--accent) !important;
+            /* Added for hero text rotation animation */
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .text-muted {
+            color: #6c757d;
+            opacity: 0.7;
+        }
+
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+
+        /* Responsive Adjustments */
+        /* Case Studies */
+        .case-study-card {
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .case-study-card img {
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            transition: opacity 0.3s ease;
+        }
+
+        .case-study-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .case-study-content {
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .case-study-card:hover .case-study-content {
+            transform: translateY(0);
+        }
+
+        /* Why Choose Us Section Styles */
+        .why-choose-us {
+            background-color: #f8f9fa;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-icon-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-image {
+            width: 70px;
+            height: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .shadow-hover:hover .feature-img {
+            transform: scale(1.1);
+        }
+
+        .shadow-hover {
+            transition: all 0.3s ease;
+        }
+
+        .shadow-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        .shadow-hover:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        /* BASE SCROLL ANIMATION STATES */
+        /* These are the classes that the JS will look for to trigger the animation */
+        .scroll-animate {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        /* The specific CSS for the animations are kept here */
+        .animate-fade-in-on-scroll {
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .animate-slide-up-on-scroll {
+            transform: translateY(20px); /* Initial offset before animation */
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .rounded-lg {
+            border-radius: 1rem !important;
+        }
+
+        .feature-cards .card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-cards .h5 {
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+
+        .feature-cards .card:hover .h5 {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                min-height: 500px;
+            }
+
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+
+            .banner-content p {
+                font-size: 1rem;
+            }
+
+            .case-study-card {
+                height: 300px;
+            }
+        }
+    </style>
+    <style>
+        /* Our Story Section Styles */
+        #about {
+            background-color: #f8f9fa;
+        }
+
+        .achievement-card {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .achievement-icon {
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover .achievement-icon {
+            transform: scale(1.1);
+        }
+
+        .counter-number {
+            transition: all 0.5s ease;
+        }
+
+        /* Story Section Animations */
+        .story-card {
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary) 0%, transparent 100%);
+            opacity: 0;
+            transition: all 0.5s ease;
+            z-index: 0;
+        }
+
+        .story-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .milestone-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .milestone-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--primary);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            opacity: 0.1;
+            animation: morphBg 10s linear infinite;
+        }
+
+        .story-card:hover .milestone-icon i {
+            animation: iconPulse 1.5s ease infinite;
+        }
+
+        @keyframes morphBg {
+            0% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+            25% {
+                border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+            }
+            50% {
+                border-radius: 30% 70% 70% 30% / 70% 30% 30% 70%;
+            }
+            75% {
+                border-radius: 70% 30% 30% 70% / 30% 70% 70% 30%;
+            }
+            100% {
+                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            }
+        }
+
+        @keyframes iconPulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .shadow-hover {
+            transition: all 0.3s ease;
+        }
+
+        .shadow-hover:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .story-card .card-text {
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .story-card:hover .card-text {
+            transform: translateX(5px);
+        }
+
+        /* Services Section Styles */
+        .services-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-icon-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: rgba(52, 29, 85, 0.05);
+            border-radius: 12px;
+        }
+
+        /* AI & Machine Learning Animation */
+        .neural-network {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .node {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .n1 { top: 20%; left: 20%; animation: pulse 1.5s infinite; }
+        .n2 { top: 20%; right: 20%; animation: pulse 1.5s infinite 0.3s; }
+        .n3 { top: 50%; left: 15%; animation: pulse 1.5s infinite 0.6s; }
+        .n4 { top: 50%; right: 15%; animation: pulse 1.5s infinite 0.9s; }
+        .n5 { bottom: 20%; left: 50%; animation: pulse 1.5s infinite 1.2s; }
+
+        .connection {
+            position: absolute;
+            height: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .c1 { width: 30px; top: 30%; left: 25%; transform: rotate(45deg); animation: flash 2s infinite; }
+        .c2 { width: 30px; top: 45%; right: 25%; transform: rotate(-45deg); animation: flash 2s infinite 0.6s; }
+        .c3 { width: 20px; bottom: 35%; left: 40%; transform: rotate(90deg); animation: flash 2s infinite 1.2s; }
+
+        /* Cloud Solutions Animation */
+        .cloud-animation {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cloud-base {
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            background: var(--primary);
+            opacity: 0.1;
+            border-radius: 20px;
+            animation: float 3s infinite;
+        }
+
+        .cloud-front {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 40%;
+            animation: float 3s infinite 0.5s;
+        }
+
+        .data-dot {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            animation: datamove 2s infinite;
+        }
+
+        .d1 { animation-delay: 0s; }
+        .d2 { animation-delay: 0.6s; }
+        .d3 { animation-delay: 1.2s; }
+
+        /* Digital Consulting Animation */
+        .consulting-animation {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gear {
+            position: absolute;
+            border: 3px dotted var(--primary);
+            border-radius: 50%;
+            opacity: 0.2;
+        }
+
+        .g1 {
+            width: 40px;
+            height: 40px;
+            animation: spin 4s linear infinite;
+        }
+
+        .g2 {
+            width: 30px;
+            height: 30px;
+            animation: spin 4s linear infinite reverse;
+        }
+
+        .chart-line {
+            position: absolute;
+            height: 2px;
+            background: var(--primary);
+            opacity: 0.2;
+            transform-origin: left;
+        }
+
+        .l1 { width: 20px; bottom: 30%; left: 25%; animation: grow 2s infinite; }
+        .l2 { width: 15px; bottom: 40%; left: 30%; animation: grow 2s infinite 0.6s; }
+        .l3 { width: 25px; bottom: 50%; left: 20%; animation: grow 2s infinite 1.2s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @keyframes datamove {
+            0% { transform: translate(0, 0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translate(20px, -20px); opacity: 0; }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes grow {
+            0%, 100% { transform: scaleX(0.5); opacity: 0.2; }
+            50% { transform: scaleX(1); opacity: 0.8; }
+        }
+
+        .service-card:hover .service-icon {
+            transform: translateY(-5px);
+        }
+
+        .service-card:hover .node,
+        .service-card:hover .connection,
+        .service-card:hover .data-dot,
+        .service-card:hover .chart-line {
+            animation-duration: 1s;
+        }
+
+        .service-card:hover .gear {
+            animation-duration: 2s;
+        }
+
+        .service-card .btn-outline-primary {
+            transition: all 0.3s ease;
+            border-radius: 30px;
+        }
+
+        .service-card:hover .btn-outline-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .service-card ul li {
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover ul li {
+            opacity: 1;
+            transform: translateX(5px);
+        }
+
+        .service-card ul li:nth-child(2) {
+            transition-delay: 0.1s;
+        }
+
+        .service-card ul li:nth-child(3) {
+            transition-delay: 0.2s;
+        }
+
+        /* Testimonial Styles (Unchanged but confirmed working) */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 5rem 0;
+        }
+
+        .testimonial-card .card {
+            background: #ffffff;
+            border-radius: 16px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .testimonial-card:hover .card {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-quote i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            animation: quoteAppear 0.5s ease forwards;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        /* FIX: Initial state for inner testimonial content */
+        .testimonial-content {
+            opacity: 0;
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .testimonial-text {
+            transform: translateY(10px); /* Initial offset for text slide up */
+        }
+
+        .testimonial-info {
+            transform: translateX(-20px); /* Initial offset for left slide in */
+        }
+
+        .testimonial-rating {
+            transform: translateX(20px); /* Initial offset for right slide in */
+        }
+        /* END FIX */
+
+        .avatar-circle::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: currentColor;
+            opacity: 0.1;
+            transform: scale(0);
+            border-radius: 50%;
+            animation: pulseAura 2s ease-out infinite;
+        }
+
+        @keyframes quoteAppear {
+            from { transform: scale(0) rotate(-45deg); opacity: 0; }
+            to { transform: scale(1) rotate(0deg); opacity: 0.25; }
+        }
+
+        @keyframes pulseAura {
+            0% { transform: scale(0); opacity: 0.5; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+
+        /* Client Logo Animations */
+        .client-logo-wrapper {
+            position: relative;
+            padding: 1rem;
+            opacity: 0;
+            /* Animation applied via JS for better control */
+        }
+
+        .client-logo {
+            max-width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            filter: grayscale(100%);
+        }
+
+        .client-logo-wrapper:hover .client-logo {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <header id="header-container">
+        <!-- Removed transition class as it uses Tailwind utility classes not globally imported, handled by custom CSS. -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <!-- Restored original image path and alt attribute -->
+                    <img src="images/Logo-C.png" alt="SynraEdge Global Logo" height="80" onerror="this.onerror=null;this.src='https://placehold.co/150x80/341d55/ffffff?text=SYNRAEDGE+LOGO';">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                What We Do
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Services</h6></li>
+                                <li><a class="dropdown-item" href="services/services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="services/cloud.html">Cloud</a></li>
+                                <li><a class="dropdown-item" href="services/consulting.html">Consulting</a></li>
+                                <li><a class="dropdown-item" href="services/ai-ml.html">AI & Machine Learning</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><h6 class="dropdown-header">Industries</h6></li>
+                                <li><a class="dropdown-item" href="industries/finance.html">Banking & Finance</a></li>
+                                <li><a class="dropdown-item" href="industries/healthcare.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="industries/manufacturing.html">Manufacturing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="company/testimonials.html">What We Think</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="company/about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers/careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="careers/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section with Dynamic Content -->
+    <section class="hero-banner position-relative vh-100 d-flex align-items-end pb-5">
+        <div class="container-fluid px-0">
+            <div class="video-container position-absolute w-100 h-100" style="top: 0;">
+                <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover" onerror="this.style.display='none'; this.closest('.video-container').style.background = 'linear-gradient(45deg, #341d55, #7470a6)';">
+                    <!-- Restored original video path -->
+                    <source src="images/Company_Logo_Intro_Video_Creation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center hero-content text-white mb-5">
+                        <h1 class="display-3 fw-bold mb-4 scroll-animate" data-animation="fade-in">
+                            Transform Your Business with
+                            <span class="text-rotating">
+                                <span class="text-accent" style="display: inline-block;">AI-Powered Solutions</span>
+                                <span class="text-accent" style="display: none;">Cloud Innovation</span>
+                                <span class="text-accent" style="display: none;">Digital Transformation</span>
+                            </span>
+                        </h1>
+                        <p class="lead mb-4 scroll-animate" data-animation="slide-up">As a global leader, we blend consulting and AI expertise across design, engineering and operations to accelerate business transformation.</p>
+                        <div class="d-flex justify-content-center gap-3 scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
+                            <a href="/about-us/" class="btn btn-primary btn-lg">
+                                <i class="fas fa-rocket me-2"></i>Learn More
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Contact Us
+                            </a>
+                        </div>
+                        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                            <a href="#features" class="text-white">
+                                <!-- REMOVED BOUNCE ANIMATION: Removed the unnecessary class 'animate-bounce' -->
+                                <i class="fas fa-chevron-down fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="py-5 bg-light overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">
+                        <!-- Restored original image path -->
+                        <img src="./images/pkl.png" alt="Client Logo A" class="img-fluid client-logo">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        <!-- Restored original image path -->
+                        <img src="./images/pkl2.jpg" alt="Client Logo B" class="img-fluid client-logo">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.3s;">
+                        <!-- Restored original image path -->
+                        <img src="./images/pkl3.jpg" alt="Client Logo C" class="img-fluid client-logo">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.4s;">
+                        <!-- Restored original image path -->
+                        <img src="./images/pkl4.jpg" alt="Client Logo D" class="img-fluid client-logo">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <div class="client-logo-wrapper scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
+                        <!-- Restored original image path -->
+                        <img src="./images/pkl5.jpg" alt="Client Logo E" class="img-fluid client-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies Section -->
+    <section class="case-studies py-5">
+        <div class="container">
+            <h2 class="text-center h2 mb-5 scroll-animate" data-animation="fade-in">Success Stories</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="case-study-card position-relative scroll-animate shadow-hover" data-animation="slide-up">
+                        <!-- Restored original image path -->
+                        <img src="images/Gemini_Generated_Image_rglkhqrglkhqrglk.png" alt="Case Study 1" class="img-fluid w-100">
+                        <div class="case-study-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end">
+                            <div class="case-study-content p-4 text-white">
+                                <h3 class="h5 mb-3">Digital Transformation for Global Bank</h3>
+                                <p class="mb-0">See how we helped transform banking operations with AI</p>
+                                <a href="/case-studies/banking" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="case-study-card position-relative scroll-animate shadow-hover" data-animation="slide-up" style="transition-delay: 0.1s;">
+                        <!-- Restored original image path -->
+                        <img src="images/Gemini_Generated_Image_rglkhqrglkhqrglk (1).png" alt="Case Study 2" class="img-fluid w-100">
+                        <div class="case-study-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end">
+                            <div class="case-study-content p-4 text-white">
+                                <h3 class="h5 mb-3">Healthcare Innovation</h3>
+                                <p class="mb-0">Revolutionizing patient care with smart technology</p>
+                                <a href="/case-studies/healthcare" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="case-study-card position-relative scroll-animate shadow-hover" data-animation="slide-up" style="transition-delay: 0.2s;">
+                        <!-- Restored original image path -->
+                        <img src="images/Gemini_Generated_Image_rglkhqrglkhqrglk.png" alt="Case Study 3" class="img-fluid w-100">
+                        <div class="case-study-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end">
+                            <div class="case-study-content p-4 text-white">
+                                <h3 class="h5 mb-3">Manufacturing Excellence</h3>
+                                <p class="mb-0">Smart factory solutions for the future</p>
+                                <a href="/case-studies/manufacturing" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 scroll-animate" data-animation="fade-in">Why Choose SynraEdge Global?</h2>
+                <p class="lead text-muted scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">We bring innovation, expertise, and excellence to every project</p>
+            </div>
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="feature-cards">
+                        <div class="card border-0 bg-white shadow-hover mb-4 scroll-animate" data-animation="slide-up" style="transition-delay: 0.2s;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="feature-icon-wrapper me-4">
+                                        <div class="feature-image rounded-circle overflow-hidden">
+                                            <!-- Restored original image path -->
+                                            <img src="images/wcu1.png" alt="AI-First Approach" class="img-fluid feature-img">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 mb-2">AI-First Approach</h3>
+                                        <p class="mb-0 text-muted">Leveraging cutting-edge AI technologies to deliver intelligent solutions that transform businesses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 bg-white shadow-hover mb-4 scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="feature-icon-wrapper me-4">
+                                        <div class="feature-image rounded-circle overflow-hidden">
+                                            <!-- Restored original image path -->
+                                            <img src="images/wcu2.png" alt="Industry Expertise" class="img-fluid feature-img">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 mb-2">Industry Expertise</h3>
+                                        <p class="mb-0 text-muted">Deep domain knowledge and proven track record across multiple industries worldwide</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 bg-white shadow-hover mb-4 scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="feature-icon-wrapper me-4">
+                                        <div class="feature-image rounded-circle overflow-hidden">
+                                            <!-- Restored original image path -->
+                                            <img src="images/wcu3.png" alt="Global Team" class="img-fluid feature-img">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3 class="h5 mb-2">Global Team</h3>
+                                        <p class="mb-0 text-muted">Expert professionals working together to deliver excellence and innovation globally</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
+                        <!-- Restored original image path -->
+                        <img src="images/wcub1.png" alt="Why Choose Us" class="img-fluid rounded-lg shadow-lg">
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary rounded-lg" style="opacity: 0; z-index: -1; transform: translate(20px, 20px);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Our Journey</span>
+                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Our Story of Innovation</h2>
+                    <p class="lead text-muted mb-5 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        From our humble beginnings to becoming a global leader in digital transformation,
+                        we've consistently pushed the boundaries of innovation while maintaining our commitment to excellence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card story-card h-100 border-0 shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="milestone-icon me-3">
+                                    <i class="fas fa-rocket fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-0">Our Mission</h3>
+                            </div>
+                            <p class="card-text">To empower businesses with cutting-edge technology solutions that drive growth and innovation in the digital age.</p>
+                            <div class="card-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card story-card h-100 border-0 shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="milestone-icon me-3">
+                                    <i class="fas fa-eye fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-0">Our Vision</h3>
+                            </div>
+                            <p class="card-text">To be the global leader in digital transformation, setting new standards in technology innovation and service excellence.</p>
+                            <div class="card-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card story-card h-100 border-0 shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="milestone-icon me-3">
+                                    <i class="fas fa-star fa-2x text-primary"></i>
+                                </div>
+                                <h3 class="card-title h5 mb-0">Our Values</h3>
+                            </div>
+                            <p class="card-text">Innovation, Excellence, Integrity, and Customer-First approach guide every decision and action we take.</p>
+                            <div class="card-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="achievement-cards">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-3 col-6">
+                                <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.6s;">
+                                    <div class="achievement-icon mb-3">
+                                        <i class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                    </div>
+                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
+                                        <span class="counter-number" data-target="10">0</span>+
+                                    </h3>
+                                    <p class="mb-0 text-muted">Years of Excellence</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.7s;">
+                                    <div class="achievement-icon mb-3">
+                                        <i class="fas fa-project-diagram fa-2x text-primary"></i>
+                                    </div>
+                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
+                                        <span class="counter-number" data-target="500">0</span>+
+                                    </h3>
+                                    <p class="mb-0 text-muted">Projects Delivered</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.8s;">
+                                    <div class="achievement-icon mb-3">
+                                        <i class="fas fa-users fa-2x text-primary"></i>
+                                    </div>
+                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
+                                        <span class="counter-number" data-target="50">0</span>+
+                                    </h3>
+                                    <p class="mb-0 text-muted">Team Members</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <div class="achievement-card text-center p-4 rounded-3 bg-white shadow-hover scroll-animate" data-animation="fade-in" style="transition-delay: 0.9s;">
+                                    <div class="achievement-icon mb-3">
+                                        <i class="fas fa-smile fa-2x text-primary"></i>
+                                    </div>
+                                    <h3 class="counter display-5 fw-bold text-primary mb-2">
+                                        <span class="counter-number" data-target="98">0</span>%
+                                    </h3>
+                                    <p class="mb-0 text-muted">Client Satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-5 bg-light position-relative">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Our Expertise</span>
+                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Transformative Services</h2>
+                    <p class="lead text-muted mb-0 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        Empowering businesses with cutting-edge solutions for the digital age
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- AI & Machine Learning -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
+                        <div class="card-body p-4">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon ai-icon p-3 d-inline-flex">
+                                    <div class="neural-network">
+                                        <span class="node n1"></span>
+                                        <span class="node n2"></span>
+                                        <span class="node n3"></span>
+                                        <span class="node n4"></span>
+                                        <span class="node n5"></span>
+                                        <span class="connection c1"></span>
+                                        <span class="connection c2"></span>
+                                        <span class="connection c3"></span>
+                                        <i class="fas fa-brain fa-2x text-primary position-relative"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">AI & Machine Learning</h3>
+                            <p class="text-muted mb-4">Harness the power of artificial intelligence to transform your business operations and drive innovation.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Predictive Analytics</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Machine Learning Models</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Natural Language Processing</span>
+                                </li>
+                            </ul>
+                            <a href="services/ai-ml.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="card-body p-4">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon cloud-icon p-3 d-inline-flex">
+                                    <div class="cloud-animation">
+                                        <span class="cloud-base"></span>
+                                        <span class="cloud-front"></span>
+                                        <span class="data-dot d1"></span>
+                                        <span class="data-dot d2"></span>
+                                        <span class="data-dot d3"></span>
+                                        <i class="fas fa-cloud fa-2x text-primary position-relative"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Cloud Solutions</h3>
+                            <p class="text-muted mb-4">Scale your business with secure, flexible, and efficient cloud infrastructure solutions.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Cloud Migration</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Hybrid Cloud Architecture</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Cloud Security Solutions</span>
+                                </li>
+                            </ul>
+                            <a href="services/cloud.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Consulting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="card-body p-4">
+                            <div class="service-icon-wrapper mb-4">
+                                <div class="service-icon consulting-icon p-3 d-inline-flex">
+                                    <div class="consulting-animation">
+                                        <span class="gear g1"></span>
+                                        <span class="gear g2"></span>
+                                        <span class="chart-line l1"></span>
+                                        <span class="chart-line l2"></span>
+                                        <span class="chart-line l3"></span>
+                                        <i class="fas fa-lightbulb fa-2x text-primary position-relative"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3 class="h4 mb-3">Digital Consulting</h3>
+                            <p class="text-muted mb-4">Strategic guidance to help you navigate the complexities of digital transformation.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Digital Strategy</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Process Optimization</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Technology Roadmap</span>
+                                </li>
+                            </ul>
+                            <a href="services/consulting.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 scroll-animate" data-animation="fade-in" style="transition-delay: 0.6s;">
+                <a href="services/services.html" class="btn btn-primary btn-lg">
+                    View All Services <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Testimonials Section -->
+    <section id="testimonials" class="testimonials-section py-5 position-relative overflow-hidden">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Client Stories</span>
+                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">What Our Clients Say</h2>
+                    <p class="lead text-muted mb-0 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        Real experiences from businesses we've helped transform
+                    </p>
+                </div>
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card h-100 scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
+                        <div class="card border-0 shadow-hover h-100">
+                            <div class="card-body p-4">
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                                </div>
+                                <p class="testimonial-text mb-4 testimonial-content" data-delay="0.1">
+                                    "SynraEdge Global transformed our banking operations with their AI solutions. We've seen a 40% increase in efficiency and significantly improved customer satisfaction."
+                                </p>
+                                <div class="testimonial-footer d-flex align-items-center">
+                                    <div class="testimonial-avatar">
+                                        <div class="avatar-circle bg-primary text-white">
+                                            <span>JD</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-info ms-3 testimonial-content" data-delay="0.2">
+                                        <h5 class="mb-1">John Doe</h5>
+                                        <p class="text-muted mb-0">CEO, Global Banking Corp</p>
+                                    </div>
+                                    <div class="testimonial-rating ms-auto testimonial-content" data-delay="0.3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card h-100 scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="card border-0 shadow-hover h-100">
+                            <div class="card-body p-4">
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                                </div>
+                                <p class="testimonial-text mb-4 testimonial-content" data-delay="0.1">
+                                    "The cloud migration strategy developed by the team was flawless. We've reduced our infrastructure costs by 35% while improving system reliability."
+                                </p>
+                                <div class="testimonial-footer d-flex align-items-center">
+                                    <div class="testimonial-avatar">
+                                        <div class="avatar-circle bg-secondary text-white">
+                                            <span>MS</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-info ms-3 testimonial-content" data-delay="0.2">
+                                        <h5 class="mb-1">Maria Santos</h5>
+                                        <p class="text-muted mb-0">CTO, TechInnovate</p>
+                                    </div>
+                                    <div class="testimonial-rating ms-auto testimonial-content" data-delay="0.3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4">
+                    <div class="testimonial-card h-100 scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="card border-0 shadow-hover h-100">
+                            <div class="card-body p-4">
+                                <div class="testimonial-quote mb-4">
+                                    <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                                </div>
+                                <p class="testimonial-text mb-4 testimonial-content" data-delay="0.1">
+                                    "Their expertise in healthcare technology helped us implement AI-driven diagnostics. Patient care quality has improved dramatically."
+                                </p>
+                                <div class="testimonial-footer d-flex align-items-center">
+                                    <div class="testimonial-avatar">
+                                        <div class="avatar-circle bg-accent text-dark">
+                                            <span>RJ</span>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-info ms-3 testimonial-content" data-delay="0.2">
+                                        <h5 class="mb-1">Dr. Robert Johnson</h5>
+                                        <p class="text-muted mb-0">Director, HealthTech Solutions</p>
+                                    </div>
+                                    <div class="testimonial-rating ms-auto testimonial-content" data-delay="0.3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div class="testimonial-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-section py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-wrapper bg-white shadow-lg rounded-3 p-4 p-md-5">
+                        <h2 class="text-center mb-4">Contact Us</h2>
+                        <p class="text-center text-muted mb-5">Let's discuss how we can help transform your business</p>
+                        <form id="contactForm" class="needs-validation" onsubmit="submitForm(event)">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="entry.1234567890" placeholder="Your Name" required>
+                                        <label for="name">Your Name</label>
+                                        <div class="invalid-feedback">Please enter your name</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="entry.1234567891" placeholder="name@example.com" required>
+                                        <label for="email">Email Address</label>
+                                        <div class="invalid-feedback">Please enter a valid email</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="company" name="entry.1234567892" placeholder="Company Name" required>
+                                        <label for="company">Company Name</label>
+                                        <div class="invalid-feedback">Please enter your company name</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="service" name="entry.1234567893" required>
+                                            <option value="">Select a Service</option>
+                                            <option value="ai">AI & Machine Learning</option>
+                                            <option value="cloud">Cloud Solutions</option>
+                                            <option value="digital">Digital Transformation</option>
+                                            <option value="consulting">Consulting Services</option>
+                                        </select>
+                                        <label for="service">Service of Interest</label>
+                                        <div class="invalid-feedback">Please select a service</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" name="entry.1234567894" placeholder="Your Message" style="height: 150px" required></textarea>
+                                        <label for="message">Your Message</label>
+                                        <div class="invalid-feedback">Please enter your message</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="consent" name="entry.1234567895" required>
+                                        <label class="form-check-label text-muted" for="consent">
+                                            I agree to receive communications from SynraEdge Global
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary btn-lg px-5" id="submitButton">
+                                        <span class="button-text">Send Message</span>
+                                        <span class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Success Message -->
+                            <div class="alert alert-success mt-3 d-none" id="successMessage">
+                                Thank you for your message! We'll get back to you soon.
+                            </div>
+                            <!-- Error Message -->
+                            <div class="alert alert-danger mt-3 d-none" id="errorMessage">
+                                Something went wrong. Please try again later.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>About SynraEdge Global</h5>
+                    <p class="text-white-50">As a global leader, we blend consulting and AI expertise across design, engineering and operations to accelerate business transformation.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3 text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services/ai-ml.html" class="text-white-50 text-decoration-none">AI & Machine Learning</a></li>
+                        <li class="mb-2"><a href="services/cloud.html" class="text-white-50 text-decoration-none">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="services/consulting.html" class="text-white-50 text-decoration-none">Digital Consulting</a></li>
+                        <li class="mb-2"><a href="services/services.html" class="text-white-50 text-decoration-none">Engineering Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Industries</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="industries/finance.html" class="text-white-50 text-decoration-none">Banking & Finance</a></li>
+                        <li class="mb-2"><a href="industries/healthcare.html" class="text-white-50 text-decoration-none">Healthcare</a></li>
+                        <li class="mb-2"><a href="industries/manufacturing.html" class="text-white-50 text-decoration-none">Manufacturing</a></li>
+                        <li class="mb-2"><a href="industries/retail.html" class="text-white-50 text-decoration-none">Retail & Consumer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@synraedgeglobal.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 8721721666</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Nexus Business Center<br>Madhapur, Hyderabad, India, 500081.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 SynraEdge Global. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="/privacy/" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="/terms/" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+                    <a href="/sitemap/" class="text-white-50 text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Removed non-functional local script imports: common.js, nav.js, home.js, counter.js -->
+
+    <script>
+        // --- 1. Navbar Scroll Effect ---
+        const mainNavbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNavbar.classList.add('scrolled');
+            } else {
+                mainNavbar.classList.remove('scrolled');
+            }
+        });
+
+
+        // --- 2. Hero Text Rotation Fix (Corrected Modulo Operator) ---
+        function initializeTextRotator() {
+            const textElements = document.querySelectorAll('.text-rotating span');
+            if (textElements.length === 0) return;
+
+            let currentIndex = 0;
+            // Hide all but the first one on initialization
+            textElements.forEach((el, index) => {
+                el.style.display = index === 0 ? 'inline-block' : 'none';
+            });
+
+            function rotateText() {
+                // Fade out current text
+                textElements[currentIndex].style.opacity = '0';
+                textElements[currentIndex].style.transform = 'translateY(10px)';
+
+                // Calculate next index using the crucial modulo operator (%)
+                currentIndex = (currentIndex + 1) % textElements.length;
+
+                setTimeout(() => {
+                    // Hide previous and show next
+                    textElements.forEach((el, index) => {
+                        el.style.display = 'none';
+                    });
+                    textElements[currentIndex].style.display = 'inline-block';
+                    
+                    // Fade in next text
+                    setTimeout(() => {
+                        textElements[currentIndex].style.opacity = '1';
+                        textElements[currentIndex].style.transform = 'translateY(0)';
+                    }, 50); // Small delay to ensure display:block applies first
+                }, 500); // Wait for fade out time
+
+            }
+
+            // Start rotation interval
+            setInterval(rotateText, 3000);
+        }
+
+        // --- 3. Intersection Observer for Scroll Animations and Counter ---
+        function initAnimationsAndCounters() {
+            // Helper function for the counter animation
+            function startCounter(target) {
+                const countElement = target.querySelector('.counter-number');
+                const finalValue = parseInt(countElement.getAttribute('data-target'));
+                const duration = 2000;
+                let startTimestamp = null;
+                const isPercentage = countElement.textContent.includes('%');
+                countElement.textContent = '0'; // Reset to 0 before counting
+
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = timestamp - startTimestamp;
+                    const percentage = Math.min(progress / duration, 1);
+                    const currentCount = Math.floor(percentage * finalValue);
+
+                    countElement.textContent = currentCount;
+                    if (isPercentage) {
+                        countElement.textContent += '%';
+                    }
+
+                    if (percentage < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        // Ensure it hits the final value precisely
+                        countElement.textContent = finalValue + (isPercentage ? '%' : '');
+                    }
+                };
+
+                window.requestAnimationFrame(step);
+            }
+
+            // Helper function for testimonial card inner content animation
+            function animateTestimonialContent(card) {
+                const innerElements = card.querySelectorAll('.testimonial-content');
+                
+                // Get the parent card's base delay
+                const parentDelayStr = card.style.transitionDelay || '0s';
+                const parentDelayMs = parseFloat(parentDelayStr) * 1000;
+                
+                // Animate each inner element with a staggered delay
+                innerElements.forEach((el) => {
+                    const elementDelay = parseFloat(el.getAttribute('data-delay') || 0);
+                    const totalDelay = parentDelayMs + (elementDelay * 1000);
+
+                    // Apply the final visible state after the calculated delay
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translate(0, 0)'; // Reset transform for smooth entry
+                    }, totalDelay);
+                });
+            }
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Triggers when 10% of element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const animationType = target.getAttribute('data-animation');
+                        const delay = target.style.transitionDelay || '0s'; // Use transition-delay for animation-delay
+
+                        // Apply the corresponding animation class
+                        if (animationType === 'fade-in') {
+                            target.classList.add('animate-fade-in-on-scroll');
+                            target.style.animationDelay = delay;
+                        } else if (animationType === 'slide-up') {
+                            target.classList.add('animate-slide-up-on-scroll');
+                            target.style.animationDelay = delay;
+                        } else {
+                            // Default for elements without specific animation attributes
+                            target.style.opacity = '1';
+                            target.style.transform = 'translateY(0)';
+                        }
+                        
+                        // Check for counter to animate
+                        if (target.classList.contains('achievement-card')) {
+                            startCounter(target);
+                        }
+
+                        // Check for testimonial card to trigger inner animation
+                        if (target.classList.contains('testimonial-card')) {
+                             animateTestimonialContent(target);
+                        }
+
+
+                        // Stop observing once animation is applied
+                        observer.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            // Find all elements to observe
+            const elementsToAnimate = document.querySelectorAll('.scroll-animate, .achievement-card, .testimonial-card');
+            
+            // Set initial state for elements that need scroll animation
+            elementsToAnimate.forEach(el => {
+                el.style.opacity = '0';
+                // Only observe elements that are not immediately visible (like the hero text)
+                if (el.getAttribute('data-animation') || el.classList.contains('testimonial-card')) {
+                    observer.observe(el);
+                }
+            });
+
+            // The hero section's content already has 'animate-fade-in' and 'animate-slide-up' classes
+            // For the Hero, we apply the animation directly since it should run on load, 
+            // but we ensure the hero h1 and p elements have their base opacity/transform cleared
+            // as the initial classes were applied to them directly.
+            
+            // Re-apply immediate animations for hero elements 
+            document.querySelectorAll('.hero-content .scroll-animate').forEach(el => {
+                const animationType = el.getAttribute('data-animation');
+                if (animationType === 'fade-in') {
+                     el.classList.add('animate-fade-in-on-scroll');
+                } else if (animationType === 'slide-up') {
+                     el.classList.add('animate-slide-up-on-scroll');
+                }
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }
+
+        // --- 4. Form Submission ---
+        function submitForm(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const submitButton = document.getElementById('submitButton');
+            const buttonText = submitButton.querySelector('.button-text');
+            const spinner = submitButton.querySelector('.spinner-border');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!form.checkValidity()) {
+                form.classList.add('was-validated');
+                return;
+            }
+
+            buttonText.textContent = 'Sending...';
+            spinner.classList.remove('d-none');
+            submitButton.disabled = true;
+            successMessage.classList.add('d-none');
+            errorMessage.classList.add('d-none');
+
+            // NOTE: Replace this placeholder URL with your actual Google Form submission endpoint (the /formResponse URL).
+            const formUrl = 'https://forms.gle/QjLMWKZg1ES6ZEWL7'; 
+
+            const formData = new FormData(form);
+            const data = new URLSearchParams(formData);
+
+            fetch(formUrl, {
+                method: 'POST',
+                body: data,
+                mode: 'no-cors' // This is necessary for Google Forms submission from an external site
+            })
+            .then(() => {
+                // Due to 'no-cors' mode, we usually assume success here and reset.
+                successMessage.classList.remove('d-none');
+                form.reset();
+                form.classList.remove('was-validated');
+                setTimeout(() => successMessage.classList.add('d-none'), 5000);
+            })
+            .catch((error) => {
+                // Catch handler usually only catches network errors in no-cors mode
+                console.error('Submission Error:', error);
+                errorMessage.classList.remove('d-none');
+                setTimeout(() => errorMessage.classList.add('d-none'), 5000);
+            })
+            .finally(() => {
+                buttonText.textContent = 'Send Message';
+                spinner.classList.add('d-none');
+                submitButton.disabled = false;
+            });
+        }
+
+        // Form validation initialization
+        (function() {
+            'use strict';
+            var forms = document.querySelectorAll('.needs-validation');
+            Array.prototype.slice.call(forms).forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+
+        // --- 5. Initializers (Run on load) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTextRotator();
+            initAnimationsAndCounters();
+
+            // Check if the submitForm function is globally available
+            if (typeof window.submitForm === 'undefined') {
+                window.submitForm = submitForm;
+            }
+        });
+    </script>
+</body>
+</html>

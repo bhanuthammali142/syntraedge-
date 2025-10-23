@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyntraEdge Global | Testimonials - AI-Powered Technology Services</title>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/png" href="../images/ICON-C (1).png" onerror="this.href='https://placehold.co/32x32/341d55/ffffff?text=SE'">
+    <link rel="apple-touch-icon" href="../images/ICON-C (1).png" onerror="this.href='https://placehold.co/180x180/341d55/ffffff?text=SE'">
+    <link rel="manifest" href="../images/site.webmanifest">
+    <meta name="theme-color" content="#341d55">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read testimonials from SyntraEdge Global clients about our AI, cloud, and digital consulting services.">
+    <meta name="keywords" content="SyntraEdge Global testimonials, client reviews, customer feedback, AI solutions reviews">
+    <meta property="og:title" content="SyntraEdge Global | Client Testimonials">
+    <meta property="og:description" content="Hear from our satisfied clients about their success stories with SyntraEdge Global.">
+    <meta property="og:image" content="https://placehold.co/1200x630/341d55/ffffff?text=SYNRAEDGE+TESTIMONIALS">
+    
+    <!-- Core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://use.typekit.net/wrt3xlf.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    
+    <!-- Custom CSS - Exact same as index.html -->
+    <style>
+        :root {
+            --primary: #341d55;
+            --secondary: #7470a6;
+            --accent: #fbcd2e;
+            --dark: #111111;
+            --light: #ffffff;
+        }
+
+        body {
+            font-family: proxima-nova, 'Inter', sans-serif;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Banner */
+        .hero-banner {
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .video-container {
+            height: 100%;
+            position: relative;
+        }
+
+        .video-container video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Adjusted overlay for better contrast */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(52, 29, 85, 0.9),
+                rgba(116, 112, 166, 0.8)
+            );
+        }
+        
+        .banner-content {
+            width: 90%;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 4px 10px rgba(52, 29, 85, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            box-shadow: 0 6px 15px rgba(116, 112, 166, 0.6);
+        }
+
+        .btn-outline-light {
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+        }
+
+        /* Testimonial Cards */
+        .testimonial-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-icon-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: rgba(52, 29, 85, 0.05);
+            border-radius: 12px;
+        }
+
+        .testimonial-card:hover .testimonial-icon {
+            transform: translateY(-5px);
+        }
+
+        /* Custom Utilities */
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        .text-accent {
+            color: var(--accent) !important;
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .text-muted {
+            color: #6c757d;
+            opacity: 0.7;
+        }
+
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+
+        /* BASE SCROLL ANIMATION STATES */
+        .scroll-animate {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .animate-fade-in-on-scroll {
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .animate-slide-up-on-scroll {
+            transform: translateY(20px);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .rounded-lg {
+            border-radius: 1rem !important;
+        }
+
+        .shadow-hover {
+            transition: all 0.3s ease;
+        }
+
+        .shadow-hover:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner {
+                min-height: 500px;
+            }
+
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+
+            .banner-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <header id="header-container">
+        <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/Logo-C.png" alt="SynraEdge Global Logo" height="80" onerror="this.onerror=null;this.src='https://placehold.co/150x80/341d55/ffffff?text=SYNRAEDGE+LOGO';">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                What We Do
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><h6 class="dropdown-header">Services</h6></li>
+                                <li><a class="dropdown-item" href="../services/services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="../services/cloud.html">Cloud</a></li>
+                                <li><a class="dropdown-item" href="../services/consulting.html">Consulting</a></li>
+                                <li><a class="dropdown-item" href="../services/ai-ml.html">AI & Machine Learning</a></li>
+                                <li><div class="dropdown-divider"></div></li>
+                                <li><h6 class="dropdown-header">Industries</h6></li>
+                                <li><a class="dropdown-item" href="../industries/finance.html">Banking & Finance</a></li>
+                                <li><a class="dropdown-item" href="../industries/healthcare.html">Healthcare</a></li>
+                                <li><a class="dropdown-item" href="../industries/manufacturing.html">Manufacturing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="testimonials.html">What We Think</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../careers/careers.html">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../careers/contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-banner position-relative vh-100 d-flex align-items-end pb-5">
+        <div class="container-fluid px-0">
+            <div class="video-container position-absolute w-100 h-100" style="top: 0;">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center hero-content text-white mb-5">
+                        <h1 class="display-3 fw-bold mb-4 scroll-animate" data-animation="fade-in">
+                            Client
+                            <span class="text-accent">Testimonials</span>
+                        </h1>
+                        <p class="lead mb-4 scroll-animate" data-animation="slide-up">Hear from our satisfied clients about their success stories and the impact of our solutions.</p>
+                        <div class="d-flex justify-content-center gap-3 scroll-animate" data-animation="fade-in" style="transition-delay: 0.5s;">
+                            <a href="#testimonials" class="btn btn-primary btn-lg">
+                                <i class="fas fa-quote-left me-2"></i>Read Stories
+                            </a>
+                            <a href="../careers/contact.html" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-envelope me-2"></i>Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5 bg-light position-relative">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3 scroll-animate" data-animation="fade-in">Client Success</span>
+                    <h2 class="display-4 fw-bold mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">What Our Clients Say</h2>
+                    <p class="lead text-muted mb-0 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        Real stories from real clients about their transformation journey
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Testimonial 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.3s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"SyntraEdge Global transformed our manufacturing operations with their Industry 4.0 solutions. We've seen a 40% increase in efficiency and significant cost savings."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=JS" alt="John Smith" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">John Smith</h5>
+                                    <p class="text-muted mb-0">CEO, TechManufacturing Inc.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.4s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"Their AI-powered analytics helped us understand our customers better than ever. Our sales increased by 35% in just six months."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=SJ" alt="Sarah Johnson" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">Sarah Johnson</h5>
+                                    <p class="text-muted mb-0">CMO, RetailMax Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.5s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"The cloud migration was seamless and their support throughout the process was exceptional. We're now more agile and scalable than ever."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=MC" alt="Michael Chen" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">Michael Chen</h5>
+                                    <p class="text-muted mb-0">CTO, FinanceFirst Bank</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.6s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"Their digital consulting helped us navigate complex transformation challenges. The ROI has been outstanding."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=AL" alt="Anna Lee" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">Anna Lee</h5>
+                                    <p class="text-muted mb-0">VP Operations, HealthTech Corp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.7s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"Working with SyntraEdge Global was a game-changer. Their expertise in AI and machine learning is unmatched."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=DW" alt="David Wilson" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">David Wilson</h5>
+                                    <p class="text-muted mb-0">Founder, DataDriven Analytics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card h-100 card border-0 bg-white shadow-hover scroll-animate" data-animation="slide-up" style="transition-delay: 0.8s;">
+                        <div class="card-body p-4">
+                            <div class="testimonial-icon-wrapper mb-4">
+                                <div class="testimonial-icon p-3 d-inline-flex">
+                                    <i class="fas fa-quote-left fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <blockquote class="mb-4">
+                                <p class="text-muted mb-3">"Professional, reliable, and innovative. SyntraEdge Global delivered exactly what they promised and more."</p>
+                            </blockquote>
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <img src="https://placehold.co/60x60/341d55/ffffff?text=RB" alt="Robert Brown" class="rounded-circle" width="60" height="60">
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1 text-primary">Robert Brown</h5>
+                                    <p class="text-muted mb-0">Director, GlobalTech Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4 scroll-animate" data-animation="fade-in">Ready to Join Our Success Stories?</h2>
+                    <p class="lead mb-4 scroll-animate" data-animation="fade-in" style="transition-delay: 0.1s;">Let's discuss how we can help transform your business</p>
+                    <a href="../careers/contact.html" class="btn btn-light btn-lg me-3 scroll-animate" data-animation="fade-in" style="transition-delay: 0.2s;">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
+                    <a href="../services/services.html" class="btn btn-outline-light btn-lg scroll-animate" data-animation="fade-in" style="transition-delay: 0.3s;">
+                        <i class="fas fa-rocket me-2"></i>Our Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>About SyntraEdge Global</h5>
+                    <p class="text-white-50">As a global leader, we blend consulting and AI expertise across design, engineering and operations to accelerate business transformation.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3 text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../services/services.html" class="text-white-50 text-decoration-none">All Services</a></li>
+                        <li class="mb-2"><a href="../services/ai-ml.html" class="text-white-50 text-decoration-none">AI & Machine Learning</a></li>
+                        <li class="mb-2"><a href="../services/cloud.html" class="text-white-50 text-decoration-none">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="../services/consulting.html" class="text-white-50 text-decoration-none">Digital Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Industries</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../industries/finance.html" class="text-white-50 text-decoration-none">Banking & Finance</a></li>
+                        <li class="mb-2"><a href="../industries/healthcare.html" class="text-white-50 text-decoration-none">Healthcare</a></li>
+                        <li class="mb-2"><a href="../industries/manufacturing.html" class="text-white-50 text-decoration-none">Manufacturing</a></li>
+                        <li class="mb-2"><a href="../industries/retail.html" class="text-white-50 text-decoration-none">Retail & Consumer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@synraedgeglobal.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 8721721666</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Nexus Business Center<br>Madhapur, Hyderabad, India, 500081.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 SyntraEdge Global. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="../privacy/" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="../terms/" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+                    <a href="../sitemap/" class="text-white-50 text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        // --- 1. Navbar Scroll Effect ---
+        const mainNavbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNavbar.classList.add('scrolled');
+            } else {
+                mainNavbar.classList.remove('scrolled');
+            }
+        });
+
+        // --- 2. Intersection Observer for Scroll Animations ---
+        function initAnimationsAndCounters() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const animationType = target.getAttribute('data-animation');
+                        const delay = target.style.transitionDelay || '0s';
+
+                        if (animationType === 'fade-in') {
+                            target.classList.add('animate-fade-in-on-scroll');
+                            target.style.animationDelay = delay;
+                        } else if (animationType === 'slide-up') {
+                            target.classList.add('animate-slide-up-on-scroll');
+                            target.style.animationDelay = delay;
+                        } else {
+                            target.style.opacity = '1';
+                            target.style.transform = 'translateY(0)';
+                        }
+
+                        observer.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            const elementsToAnimate = document.querySelectorAll('.scroll-animate');
+            
+            elementsToAnimate.forEach(el => {
+                el.style.opacity = '0';
+                if (el.getAttribute('data-animation')) {
+                    observer.observe(el);
+                }
+            });
+
+            document.querySelectorAll('.hero-content .scroll-animate').forEach(el => {
+                const animationType = el.getAttribute('data-animation');
+                if (animationType === 'fade-in') {
+                     el.classList.add('animate-fade-in-on-scroll');
+                } else if (animationType === 'slide-up') {
+                     el.classList.add('animate-slide-up-on-scroll');
+                }
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }
+
+        // --- 3. Initializers (Run on load) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            initAnimationsAndCounters();
+        });
+    </script>
+</body>
+</html>

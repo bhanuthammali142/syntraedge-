@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyntraEdge Global | Our Services - AI-Powered Technology Solutions</title>
+    
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="icon" type="image/png" href="../images/ICON-C (1).png" onerror="this.href='https://placehold.co/32x32/341d55/ffffff?text=SE'">
+    <link rel="apple-touch-icon" href="../images/ICON-C (1).png" onerror="this.href='https://placehold.co/180x180/341d55/ffffff?text=SE'">
+    <link rel="manifest" href="../images/site.webmanifest">
+    <meta name="theme-color" content="#341d55">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover SyntraEdge Global's comprehensive suite of AI-powered technology services including cloud solutions, digital consulting, and machine learning.">
+    <meta name="keywords" content="SyntraEdge Global, AI solutions, cloud services, digital transformation, technology consulting, machine learning">
+    <meta property="og:title" content="SyntraEdge Global | Technology Services & Solutions">
+    <meta property="og:description" content="Transform your business with our comprehensive AI-powered technology services.">
+    <meta property="og:image" content="https://placehold.co/1200x630/341d55/ffffff?text=SYNRAEDGE+SERVICES">
+    
+    <!-- Core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://use.typekit.net/wrt3xlf.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --primary: #341d55;
+            --secondary: #7470a6;
+            --accent: #fbcd2e;
+            --dark: #111111;
+            --light: #ffffff;
+        }
+
+        body {
+            font-family: proxima-nova, 'Inter', sans-serif;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand img {
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+        }
+
+        /* Service Cards */
+        .service-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(52, 29, 85, 0.05);
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            box-shadow: 0 4px 10px rgba(52, 29, 85, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+            box-shadow: 0 6px 15px rgba(116, 112, 166, 0.6);
+        }
+
+        .btn-outline-primary {
+            border-radius: 30px;
+            padding: 0.75rem 2rem;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+
+        /* Animations */
+        .scroll-animate {
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-fade-in-on-scroll {
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .animate-slide-up-on-scroll {
+            transform: translateY(20px);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 6rem 0 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/Logo-C.png" alt="SynraEdge Global Logo" height="80" onerror="this.onerror=null;this.src='https://placehold.co/150x80/341d55/ffffff?text=SYNRAEDGE+LOGO';">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">Services</h6></li>
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="cloud.html">Cloud</a></li>
+                            <li><a class="dropdown-item" href="consulting.html">Consulting</a></li>
+                            <li><a class="dropdown-item" href="ai-ml.html">AI & Machine Learning</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><h6 class="dropdown-header">Industries</h6></li>
+                            <li><a class="dropdown-item" href="../industries/finance.html">Banking & Finance</a></li>
+                            <li><a class="dropdown-item" href="../industries/healthcare.html">Healthcare</a></li>
+                            <li><a class="dropdown-item" href="../industries/manufacturing.html">Manufacturing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../company/testimonials.html">What We Think</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../company/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../careers/careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../careers/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Our Services</h1>
+                    <p class="lead mb-0">Comprehensive AI-powered technology solutions to transform your business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- AI & Machine Learning -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="h4 mb-3">AI & Machine Learning</h3>
+                            <p class="text-muted mb-4">Harness the power of artificial intelligence to transform your business operations and drive innovation.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Predictive Analytics</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Machine Learning Models</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Natural Language Processing</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Computer Vision</span>
+                                </li>
+                            </ul>
+                            <a href="ai-ml.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Cloud Solutions</h3>
+                            <p class="text-muted mb-4">Scale your business with secure, flexible, and efficient cloud infrastructure solutions.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Cloud Migration</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Hybrid Cloud Architecture</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Cloud Security Solutions</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>DevOps & Automation</span>
+                                </li>
+                            </ul>
+                            <a href="cloud.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Consulting -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Digital Consulting</h3>
+                            <p class="text-muted mb-4">Strategic guidance to help you navigate the complexities of digital transformation.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Digital Strategy</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Process Optimization</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Technology Roadmap</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Change Management</span>
+                                </li>
+                            </ul>
+                            <a href="consulting.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analytics -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Data Analytics</h3>
+                            <p class="text-muted mb-4">Transform raw data into actionable insights that drive business growth and decision-making.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Business Intelligence</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Data Visualization</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Real-time Analytics</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Data Warehousing</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Cybersecurity</h3>
+                            <p class="text-muted mb-4">Protect your digital assets with comprehensive security solutions and threat management.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Security Assessment</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Threat Detection</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Compliance Management</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Incident Response</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card card border-0 bg-white shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Software Development</h3>
+                            <p class="text-muted mb-4">Custom software solutions built with modern technologies and best practices.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Web Applications</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Mobile Apps</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>API Development</span>
+                                </li>
+                                <li class="mb-2 d-flex align-items-center">
+                                    <i class="fas fa-check text-primary me-2"></i>
+                                    <span>Microservices</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Transform Your Business?</h2>
+                    <p class="lead text-muted mb-4">Let's discuss how our services can help you achieve your digital transformation goals.</p>
+                    <a href="../careers/contact.html" class="btn btn-primary btn-lg me-3">
+                        <i class="fas fa-envelope me-2"></i>Contact Us
+                    </a>
+                    <a href="../company/about.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5>About SyntraEdge Global</h5>
+                    <p class="text-white-50">As a global leader, we blend consulting and AI expertise across design, engineering and operations to accelerate business transformation.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="me-3 text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none">All Services</a></li>
+                        <li class="mb-2"><a href="ai-ml.html" class="text-white-50 text-decoration-none">AI & Machine Learning</a></li>
+                        <li class="mb-2"><a href="cloud.html" class="text-white-50 text-decoration-none">Cloud Solutions</a></li>
+                        <li class="mb-2"><a href="consulting.html" class="text-white-50 text-decoration-none">Digital Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Industries</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../industries/finance.html" class="text-white-50 text-decoration-none">Banking & Finance</a></li>
+                        <li class="mb-2"><a href="../industries/healthcare.html" class="text-white-50 text-decoration-none">Healthcare</a></li>
+                        <li class="mb-2"><a href="../industries/manufacturing.html" class="text-white-50 text-decoration-none">Manufacturing</a></li>
+                        <li class="mb-2"><a href="../industries/retail.html" class="text-white-50 text-decoration-none">Retail & Consumer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@synraedgeglobal.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 8721721666</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Nexus Business Center<br>Madhapur, Hyderabad, India, 500081.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4 bg-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-50 mb-0">&copy; 2025 SyntraEdge Global. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="../privacy/" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="../terms/" class="text-white-50 text-decoration-none me-3">Terms of Service</a>
+                    <a href="../sitemap/" class="text-white-50 text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // Navbar scroll effect
+        const mainNavbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                mainNavbar.classList.add('scrolled');
+            } else {
+                mainNavbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-on-scroll');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* General Styles */
+.section-padding {
+    padding: 5rem 0;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Benefit Cards */
+.benefit-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* Culture Section */
+.culture-image {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.culture-image img {
+    transition: transform 0.5s ease;
+}
+
+.culture-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Job Cards */
+.job-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.tag-location {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tag-type {
+    background: #e3f2fd;
+    color: #0d6efd;
+}
+
+.apply-button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+}
+
+/* Perks Section */
+.perk-item {
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.perk-item:hover {
+    transform: translateY(-5px);
+}
+
+.perk-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--bs-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.perk-icon i {
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+/* Animations */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: staggerFadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-animation > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-animation > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-animation > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-animation > *:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes staggerFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 3rem 0;
+    }
+
+    .benefit-card,
+    .job-card {
+        margin-bottom: 1rem;
+    }
+
+    .perk-item {
+        margin-bottom: 2rem;
+    }
+
+    .culture-image {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .benefit-card,
+    .job-card {
+        background: #2b2b2b;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .job-tag.tag-location {
+        background: #3a3a3a;
+        color: #e0e0e0;
+    }
+
+    .job-tag.tag-type {
+        background: #1a4b8c;
+        color: #ffffff;
+    }
+
+    .section-title p {
+        color: #a0a0a0;
+    }
+}
